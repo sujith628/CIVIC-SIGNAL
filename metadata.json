@@ -1,0 +1,6 @@
+{
+  "name": "CivicSignal",
+  "description": "Intelligent municipal intelligence and citizen engagement platform for Greater Visakhapatnam Municipal Corporation (GVMC), Andhra Pradesh.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

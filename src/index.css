@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-primary: #142B45;
+    --color-secondary: #64748B;
+    --color-teal: #0F9D92;
+    --color-teal-dark: #0A726A;
+    --color-accent-blue: #3677D5;
+    --color-border: #E5EAF0;
+    --color-subtle: #F1F5F9;
+    --color-success: #16865A;
+    --color-warning: #D99225;
+    --color-error: #D94B4B;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Telugu text styling */
+  [lang="te"], .telugu-font {
+    font-family: 'Noto Sans Telugu', 'Plus Jakarta Sans', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Leaflet map container customisations */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 10;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom map pulse marker */
+@keyframes civic-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(15, 157, 146, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 14px rgba(15, 157, 146, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(15, 157, 146, 0);
+  }
+}
+
+.hotspot-pulse-danger {
+  animation: hotspot-danger 2s infinite;
+}
+
+@keyframes hotspot-danger {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 75, 75, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(217, 75, 75, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 75, 75, 0);
+  }
+}
